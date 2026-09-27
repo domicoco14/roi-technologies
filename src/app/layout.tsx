@@ -26,6 +26,14 @@ export const metadata: Metadata = {
     'AI E-commerce Tools',
     'El-Roi',
   ],
+  icons: {
+    icon: [
+      { url: '/logo-mark.jpg', type: 'image/jpeg' },
+      { url: '/icon.jpg', type: 'image/jpeg' },
+    ],
+    shortcut: '/logo-mark.jpg',
+    apple: '/logo-mark.jpg',
+  },
   openGraph: {
     title: 'ROI Technology | We See What Costs Your Store Money',
     description:
