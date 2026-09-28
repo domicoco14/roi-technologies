@@ -1,12 +1,11 @@
 @import "tailwindcss";
 
 :root {
-  --background: #08090E;
+  --background: #06070B;
   --foreground: #F3F4F6;
+  --card-bg: #0D0F17;
   --brand-purple: #8B5CF6;
-  --brand-purple-dark: #6D28D9;
   --brand-gold: #F59E0B;
-  --brand-gold-light: #FBBF24;
 }
 
 body {
@@ -19,104 +18,71 @@ body {
 
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #08090E;
+  background: #06070B;
 }
 ::-webkit-scrollbar-thumb {
-  background: #1F2436;
-  border-radius: 4px;
+  background: #181B26;
+  border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #7C3AED;
+  background: #8B5CF6;
 }
 
-/* Custom Glassmorphism Classes */
+/* Minimalist Glass & Card Utilities */
 .glass-panel {
-  background: rgba(18, 20, 32, 0.7);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(13, 15, 23, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 .glass-card {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.01) 100%);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  background: #0D0F17;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  transition: border-color 0.25s ease, transform 0.25s ease;
 }
 
 .glass-card:hover {
-  border-color: rgba(139, 92, 246, 0.4);
-  box-shadow: 0 10px 30px -10px rgba(139, 92, 246, 0.2);
+  border-color: rgba(139, 92, 246, 0.3);
 }
 
-.glass-card-gold:hover {
-  border-color: rgba(245, 158, 11, 0.5);
-  box-shadow: 0 10px 30px -10px rgba(245, 158, 11, 0.25);
-}
-
-/* Glowing Radial Accents */
-.bg-grid-pattern {
-  background-size: 40px 40px;
-  background-image: 
-    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-}
-
-.glow-purple-radial {
-  background: radial-gradient(circle at 50% 50%, rgba(139, 92, 246, 0.18) 0%, rgba(139, 92, 246, 0) 70%);
-}
-
-.glow-gold-radial {
-  background: radial-gradient(circle at 50% 50%, rgba(245, 158, 11, 0.15) 0%, rgba(245, 158, 11, 0) 70%);
-}
-
-/* Animated Gradient Text */
-.text-gradient-purple-gold {
-  background: linear-gradient(135deg, #FFFFFF 0%, #E2E8F0 50%, #FBBF24 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
+/* Subdued Gradient Text */
 .text-gradient-purple {
-  background: linear-gradient(135deg, #C084FC 0%, #8B5CF6 50%, #6D28D9 100%);
+  background: linear-gradient(135deg, #FFFFFF 0%, #A78BFA 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .text-gradient-gold {
-  background: linear-gradient(135deg, #FDE68A 0%, #F59E0B 50%, #D97706 100%);
+  background: linear-gradient(135deg, #FFFFFF 30%, #FBBF24 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-/* Custom Button Styles */
+/* Refined Minimalist Buttons */
 .btn-gold-primary {
-  background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
+  background: #F59E0B;
   color: #000000;
   font-weight: 600;
-  box-shadow: 0 4px 20px rgba(245, 158, 11, 0.35);
-  transition: all 0.3s ease;
+  transition: all 0.25s ease;
 }
 
 .btn-gold-primary:hover {
-  background: linear-gradient(135deg, #FBBF24 0%, #F59E0B 100%);
-  box-shadow: 0 6px 28px rgba(245, 158, 11, 0.55);
-  transform: translateY(-2px);
+  background: #FBBF24;
+  transform: translateY(-1px);
 }
 
 .btn-purple-outline {
-  border: 1px solid rgba(139, 92, 246, 0.4);
-  background: rgba(139, 92, 246, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.03);
   color: #FFFFFF;
-  transition: all 0.3s ease;
+  transition: all 0.25s ease;
 }
 
 .btn-purple-outline:hover {
-  background: rgba(139, 92, 246, 0.2);
-  border-color: rgba(139, 92, 246, 0.8);
-  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.25);
 }
