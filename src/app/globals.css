@@ -1,16 +1,16 @@
 @import "tailwindcss";
 
 :root {
-  --background: #06070B;
+  --background: #000000;
   --foreground: #F3F4F6;
-  --card-bg: #0D0F17;
+  --card-bg: #0A0A0A;
   --brand-purple: #8B5CF6;
   --brand-gold: #F59E0B;
 }
 
 body {
-  background-color: var(--background);
-  color: var(--foreground);
+  background-color: #000000;
+  color: #F3F4F6;
   font-family: var(--font-geist-sans), system-ui, -apple-system, sans-serif;
   overflow-x: hidden;
   scroll-behavior: smooth;
@@ -21,68 +21,61 @@ body {
   width: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #06070B;
+  background: #000000;
 }
 ::-webkit-scrollbar-thumb {
-  background: #181B26;
+  background: #1C1C1C;
   border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #8B5CF6;
 }
 
-/* Minimalist Glass & Card Utilities */
+/* Plain Minimalist Cards & Panels */
 .glass-panel {
-  background: rgba(13, 15, 23, 0.7);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  background: #0A0A0A;
+  border: 1px solid #1C1C1C;
 }
 
 .glass-card {
-  background: #0D0F17;
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  transition: border-color 0.25s ease, transform 0.25s ease;
+  background: #0A0A0A;
+  border: 1px solid #1C1C1C;
+  transition: border-color 0.2s ease;
 }
 
 .glass-card:hover {
-  border-color: rgba(139, 92, 246, 0.3);
+  border-color: #333333;
 }
 
-/* Subdued Gradient Text */
+/* Plain Subdued Text */
 .text-gradient-purple {
-  background: linear-gradient(135deg, #FFFFFF 0%, #A78BFA 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #C084FC;
 }
 
 .text-gradient-gold {
-  background: linear-gradient(135deg, #FFFFFF 30%, #FBBF24 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #FBBF24;
 }
 
-/* Refined Minimalist Buttons */
+/* Clean Plain Buttons */
 .btn-gold-primary {
   background: #F59E0B;
   color: #000000;
   font-weight: 600;
-  transition: all 0.25s ease;
+  transition: background-color 0.2s ease;
 }
 
 .btn-gold-primary:hover {
   background: #FBBF24;
-  transform: translateY(-1px);
 }
 
 .btn-purple-outline {
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid #262626;
+  background: #0D0D0D;
   color: #FFFFFF;
-  transition: all 0.25s ease;
+  transition: all 0.2s ease;
 }
 
 .btn-purple-outline:hover {
-  background: rgba(255, 255, 255, 0.08);
-  border-color: rgba(255, 255, 255, 0.25);
+  background: #1A1A1A;
+  border-color: #404040;
 }

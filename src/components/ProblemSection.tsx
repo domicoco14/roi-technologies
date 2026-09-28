@@ -33,10 +33,10 @@ export default function ProblemSection({ onOpenStoreCheck }: ProblemSectionProps
   ];
 
   return (
-    <section id="problem" className="py-20 sm:py-24 bg-[#08090E] relative">
+    <section id="problem" className="py-20 sm:py-24 bg-black border-t border-[#1C1C1C]">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
-        {/* Section Header */}
+        {/* Header */}
         <div className="text-center max-w-3xl mx-auto space-y-4 mb-14 sm:mb-16">
           <span className="text-xs font-mono uppercase tracking-wider text-purple-400">
             The Hidden Leak
@@ -59,14 +59,14 @@ export default function ProblemSection({ onOpenStoreCheck }: ProblemSectionProps
             return (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 15 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: index * 0.1 }}
-                className="glass-card p-6 sm:p-8 rounded-2xl border border-white/5 flex flex-col justify-between"
+                transition={{ duration: 0.3 }}
+                className="glass-card p-6 sm:p-8 rounded-2xl border border-[#1C1C1C] flex flex-col justify-between"
               >
                 <div className="space-y-4">
-                  <div className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-purple-400">
+                  <div className="w-10 h-10 rounded-xl bg-[#111111] border border-[#222222] flex items-center justify-center text-purple-400">
                     <Icon className="w-5 h-5" />
                   </div>
 
@@ -79,7 +79,7 @@ export default function ProblemSection({ onOpenStoreCheck }: ProblemSectionProps
                   </p>
                 </div>
 
-                <div className="mt-6 pt-4 border-t border-white/5 flex items-center justify-between text-xs text-gray-400">
+                <div className="mt-6 pt-4 border-t border-[#1C1C1C] flex items-center justify-between text-xs text-gray-400">
                   <span>Impact:</span>
                   <span className="font-mono text-gray-300">{item.impact}</span>
                 </div>
@@ -89,7 +89,7 @@ export default function ProblemSection({ onOpenStoreCheck }: ProblemSectionProps
         </div>
 
         {/* Action Banner */}
-        <div className="mt-12 glass-panel p-6 rounded-2xl border border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="mt-12 glass-panel p-6 rounded-2xl border border-[#1C1C1C] flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="text-center sm:text-left">
             <h4 className="text-base font-bold text-white">Want to find out where your store is leaking?</h4>
             <p className="text-xs text-gray-400">Our free 2-minute store check pinpoints revenue leaks.</p>
