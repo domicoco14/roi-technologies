@@ -13,42 +13,42 @@ export default function ProblemSection({ onOpenStoreCheck }: ProblemSectionProps
       icon: ShoppingBag,
       quote: "Where did that sale go?",
       description:
-        "Most stores lose the majority of shoppers right before they buy, and never find out why.",
+        "Most stores lose the majority of shoppers right before they complete payment — and never find out why.",
       impact: "Lost checkout revenue",
     },
     {
       icon: Clock,
       quote: "There’s never enough time.",
       description:
-        "Updating listings, prices, and stock by hand eats hours you don’t have.",
+        "Updating product listings, inventory levels, and prices by hand eats hours you don’t have.",
       impact: "Wasted manual hours",
     },
     {
       icon: Moon,
       quote: "Your store never sleeps. You do.",
       description:
-        "Without automation, your business stops working the moment you log off.",
-      impact: "Zero overnight follow-up",
+        "Without automation, your online business stops engaging buyers the moment you log off.",
+      impact: "Zero overnight sales follow-up",
     },
   ];
 
   return (
-    <section id="problem" className="py-20 sm:py-24 bg-black border-t border-[#1C1C1C]">
+    <section id="problem" className="py-20 sm:py-24 bg-slate-50 border-b border-slate-200">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
-        {/* Header */}
+        {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto space-y-4 mb-14 sm:mb-16">
-          <span className="text-xs font-mono uppercase tracking-wider text-purple-400">
+          <span className="text-xs font-mono uppercase tracking-wider text-purple-700 font-bold bg-purple-100 px-3 py-1 rounded-full border border-purple-200">
             The Hidden Leak
           </span>
 
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
             Every store is losing money somewhere. <br className="hidden sm:block" />
-            <span className="text-gray-400">Most owners just can’t see it.</span>
+            <span className="text-slate-500">Most owners just can’t see it.</span>
           </h2>
 
-          <p className="text-sm sm:text-base text-gray-300 leading-relaxed">
-            Maybe it’s shoppers leaving at checkout. Maybe it’s hours lost updating products by hand. Maybe it’s a store that goes quiet the moment you log off. Small leaks like these add up fast.
+          <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
+            Maybe it’s shoppers abandoning carts at checkout. Maybe it’s hours wasted updating products by hand. Maybe it’s a store that goes quiet when you log off. Small leaks add up fast — and they are easy to miss until someone looks closely.
           </p>
         </div>
 
@@ -63,25 +63,25 @@ export default function ProblemSection({ onOpenStoreCheck }: ProblemSectionProps
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.3 }}
-                className="glass-card p-6 sm:p-8 rounded-2xl border border-[#1C1C1C] flex flex-col justify-between"
+                className="glass-card p-6 sm:p-8 rounded-2xl border border-slate-200 bg-white flex flex-col justify-between shadow-xs"
               >
                 <div className="space-y-4">
-                  <div className="w-10 h-10 rounded-xl bg-[#111111] border border-[#222222] flex items-center justify-center text-purple-400">
+                  <div className="w-10 h-10 rounded-xl bg-purple-50 border border-purple-200 flex items-center justify-center text-purple-700">
                     <Icon className="w-5 h-5" />
                   </div>
 
-                  <h3 className="text-lg font-bold text-white">
+                  <h3 className="text-lg font-extrabold text-slate-900">
                     “{item.quote}”
                   </h3>
 
-                  <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">
+                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
                     {item.description}
                   </p>
                 </div>
 
-                <div className="mt-6 pt-4 border-t border-[#1C1C1C] flex items-center justify-between text-xs text-gray-400">
-                  <span>Impact:</span>
-                  <span className="font-mono text-gray-300">{item.impact}</span>
+                <div className="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
+                  <span className="font-semibold">Core Impact:</span>
+                  <span className="font-mono font-bold text-slate-800 bg-slate-100 px-2 py-0.5 rounded border border-slate-200">{item.impact}</span>
                 </div>
               </motion.div>
             );
@@ -89,10 +89,10 @@ export default function ProblemSection({ onOpenStoreCheck }: ProblemSectionProps
         </div>
 
         {/* Action Banner */}
-        <div className="mt-12 glass-panel p-6 rounded-2xl border border-[#1C1C1C] flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="mt-12 bg-white p-6 rounded-2xl border border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-4 shadow-sm">
           <div className="text-center sm:text-left">
-            <h4 className="text-base font-bold text-white">Want to find out where your store is leaking?</h4>
-            <p className="text-xs text-gray-400">Our free 2-minute store check pinpoints revenue leaks.</p>
+            <h4 className="text-base font-bold text-slate-900">Want to find out where your store is quietly leaking money?</h4>
+            <p className="text-xs text-slate-500">Our free 2-minute store check pinpoints revenue leaks with zero obligation.</p>
           </div>
           <button
             onClick={onOpenStoreCheck}

@@ -14,15 +14,15 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://roitechnology.com'),
-  title: 'ROI Technology | We See What Costs Your Store Money',
+  title: 'ROI Technology | We Spot What Costs Your Online Store Money',
   description:
-    'ROI Technology finds hidden profit leaks in online Shopify and WordPress stores — then fixes them with smart AI & automation. Get your free store check today.',
+    'ROI Technology uncovers hidden revenue leaks in Shopify and WordPress stores — then fixes them with smart AI & automation so you sell more without doing more.',
   keywords: [
     'ROI Technology',
     'Shopify Automation',
     'WordPress Store Optimization',
-    'Store Health Check',
-    'E-commerce Profit Leaks',
+    'Store Health Audit',
+    'E-commerce Revenue Leaks',
     'AI E-commerce Tools',
     'El-Roi',
   ],
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     apple: '/logo-mark.jpg',
   },
   openGraph: {
-    title: 'ROI Technology | We See What Costs Your Store Money',
+    title: 'ROI Technology | We Spot What Costs Your Online Store Money',
     description:
       'ROI finds the hidden problems in your online store — then fixes them with smart automation, so you sell more without doing more.',
     images: ['/logo-full.jpg'],
@@ -48,9 +48,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark scroll-smooth">
+    <html lang="en" className="scroll-smooth">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[#08090E] text-gray-100 min-h-screen selection:bg-amber-400 selection:text-black`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white text-slate-900 min-h-screen selection:bg-amber-100 selection:text-amber-900`}
       >
         {children}
       </body>

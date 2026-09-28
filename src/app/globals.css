@@ -1,16 +1,16 @@
 @import "tailwindcss";
 
 :root {
-  --background: #000000;
-  --foreground: #F3F4F6;
-  --card-bg: #0A0A0A;
-  --brand-purple: #8B5CF6;
-  --brand-gold: #F59E0B;
+  --background: #FFFFFF;
+  --foreground: #0F172A;
+  --card-bg: #F8FAFC;
+  --brand-purple: #7C3AED;
+  --brand-gold: #D97706;
 }
 
 body {
-  background-color: #000000;
-  color: #F3F4F6;
+  background-color: #FFFFFF;
+  color: #0F172A;
   font-family: var(--font-geist-sans), system-ui, -apple-system, sans-serif;
   overflow-x: hidden;
   scroll-behavior: smooth;
@@ -21,61 +21,69 @@ body {
   width: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #000000;
+  background: #FFFFFF;
 }
 ::-webkit-scrollbar-thumb {
-  background: #1C1C1C;
+  background: #CBD5E1;
   border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #8B5CF6;
+  background: #7C3AED;
 }
 
-/* Plain Minimalist Cards & Panels */
+/* Crisp Light Mode Glass & Cards */
 .glass-panel {
-  background: #0A0A0A;
-  border: 1px solid #1C1C1C;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid #E2E8F0;
 }
 
 .glass-card {
-  background: #0A0A0A;
-  border: 1px solid #1C1C1C;
-  transition: border-color 0.2s ease;
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
+  transition: all 0.25s ease;
 }
 
 .glass-card:hover {
-  border-color: #333333;
+  border-color: #CBD5E1;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08);
 }
 
-/* Plain Subdued Text */
+/* Text Gradients for White Mode */
 .text-gradient-purple {
-  color: #C084FC;
+  color: #7C3AED;
 }
 
 .text-gradient-gold {
-  color: #FBBF24;
+  color: #D97706;
 }
 
-/* Clean Plain Buttons */
+/* Light Theme Buttons */
 .btn-gold-primary {
-  background: #F59E0B;
-  color: #000000;
+  background: #D97706;
+  color: #FFFFFF;
   font-weight: 600;
-  transition: background-color 0.2s ease;
+  box-shadow: 0 4px 14px 0 rgba(217, 119, 6, 0.3);
+  transition: all 0.2s ease;
 }
 
 .btn-gold-primary:hover {
-  background: #FBBF24;
+  background: #B45309;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px 0 rgba(217, 119, 6, 0.4);
 }
 
 .btn-purple-outline {
-  border: 1px solid #262626;
-  background: #0D0D0D;
-  color: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  background: #F8FAFC;
+  color: #0F172A;
+  font-weight: 600;
   transition: all 0.2s ease;
 }
 
 .btn-purple-outline:hover {
-  background: #1A1A1A;
-  border-color: #404040;
+  background: #F1F5F9;
+  border-color: #CBD5E1;
 }
